@@ -38,6 +38,11 @@ Since it's not signed by anyone you can easily modify it.
 ## Privacy and data collection
 No data will be collected whatsoever.
 
+## Features
+- Ungenders
+- Little ext popup showing changes to the DOM
+- The extension icon shows the number of ungendered items
+
 ## TODO
 (Feel free to submit PRs or wait for me to do it)
 - Blacklist configurable from the ext popup window
