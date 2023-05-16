@@ -30,7 +30,7 @@ Take the .zip file in the repositories root,
 go to firefox, extensions, click on the little cogwheel,
 debug, "install temporary extension".
 That is because I did not yet upload this to the mozilla store,
-nor am I sure whether they will would it, since it's
+nor am I sure whether they  would keep it, since it's
 "anti-woke". Installing it this way is how a developer
 would install an extension during development.
 Since it's not signed by anyone you can easily modify it.
