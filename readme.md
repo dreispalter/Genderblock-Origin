@@ -18,7 +18,7 @@ It will remove most gendering, but will also
 mangle some regular words.  
 Examples:
 - Constantin -> Constant
-- Berlin -> Berl
+- Kolleginnen -> Kolleg
 
 Also usernames are an issue.
 
@@ -42,6 +42,68 @@ No data will be collected whatsoever.
 - Ungenders
 - Little ext popup showing changes to the DOM
 - The extension icon shows the number of ungendered items
+
+## Example:
+This DOM is displayed as follows:
+```html
+<p>
+Ärzte und Ärztinnen
+<br>Arzt oder Ärztin
+<br>Ärztin oder Arzt
+<br>Arzt und Ärztin
+<br>Ärztin und Arzt
+<br>Ärzt:innen
+<br>Ärzt*innen
+<br>Kolleg*innen
+<br>Kolleg*in
+<br>Bauarbeiterinnen
+<br>Bauarbeiter:innen
+<br>Bauarbeiter*innen
+<br>Bauarbeiter:in
+<br>Bauarbeiter*in
+<br>Bauarbeiter und Bauarbeiterinnen
+<br>Bauarbeiterinnen und Bauarbeiter
+<br>Bauarbeiter und -Bauarbeiterinnen
+<br>Bauarbeiterinnen und -Bauarbeiter
+<br>Bauarbeiter und -innen
+<br>Bauarbeiter und -innen
+<br>Bauarbeiter oder Bauarbeiterinnen
+<br>Bauarbeiterinnen oder Bauarbeiter
+<br>Bauarbeiter oder -Bauarbeiterinnen
+<br>Bauarbeiterinnen oder -Bauarbeiter
+<br>Bauarbeiter oder -innen
+<br>Bundesinnenministerin
+</p>
+```
+```
+// After being processed
+Ärzte
+Arzt
+Arzt
+Arzt
+Arzt
+Ärzt
+Ärzt
+Kolleg // Notice this little fluke
+Kolleg
+Bauarbeiter
+Bauarbeiter
+Bauarbeiter
+Bauarbeiter
+Bauarbeiter
+Bauarbeiter
+Bauarbeiter
+Bauarbeiter
+Bauarbeiter
+Bauarbeiter
+Bauarbeiter
+Bauarbeiter
+Bauarbeiter
+Bauarbeiter
+Bauarbeiter
+Bauarbeiter
+Bundesinnenminister
+```
 
 ## TODO
 (Feel free to submit PRs or wait for me to do it)
