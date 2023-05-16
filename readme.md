@@ -30,7 +30,7 @@ Take the .zip file in the repositories root,
 go to firefox, extensions, click on the little cogwheel,
 debug, "install temporary extension".
 That is because I did not yet upload this to the mozilla store,
-nor am I sure whether they will keep it, since it's
+nor am I sure whether they will would it, since it's
 "anti-woke". Installing it this way is how a developer
 would install an extension during development.
 Since it's not signed by anyone you can easily modify it.
@@ -109,11 +109,11 @@ Bundesinnenminister
 (Feel free to submit PRs or wait for me to do it)
 - Blacklist configurable from the ext popup window
 - Option to disable ungendering from the ext popup window
-- Option to click on ungendered words in DOM to restore them (in case a regular word got malformed and you're not sure what it means)
+- Option to click on ungendered words in DOM to restore them (in case a regular word gets malformed and you're unsure what it means)
 
 ## FAQ
 (Feel free to submit a question via issue to extend this)
-- Will there be chrome support?
+- Will there be chrome support?  
     Not by me. F google. Feel free to do it yourself.
 
 ## LICENSE
