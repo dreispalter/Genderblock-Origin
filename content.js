@@ -1,3 +1,4 @@
+// Don't process these words
 const blacklist = [
   "berlin",
   "prigoschin",
@@ -7,19 +8,32 @@ const blacklist = [
   "login",
   "origin",
 ];
+
+// Regular expressions to apply to texts
 const substitutions = [
   {
+    // Replace "Chefinnen und|oder Chefs" with "Chefs" (plural and singular)
     pattern: /[\wöäüÖÄÜß]{3,}[bcdfghjklmnpqrstvwxys]in(nen)?\ (und|oder)\ -?([\wöäüÖÄÜß]{3,})(?=\b)/g,
     replacement: "$3"
   },
   {
+    // Replace "Chefs und|oder Chefinnen" with "Chefs" (plural and singular)
     pattern: /([\wöäüÖÄÜß]{4,}) (und|oder) (-?[\wöäüÖÄÜß]{3,}[bcdfghjklmnpqrstvwxys]|-)in(nen)?(?=\b)/g,
     replacement: "$1"
   },
   {
+    // Replace "Chefin" or "Chefinnen" with "Chef"
     pattern: /([A-ZÖÄÜ][a-zöäüÖÄÜß]{2,}[bdfgklmnprtvwxs])[:*]?in(nen)?(?=\b)/g,
     replacement: "$1"
   },
+];
+
+// Look in these tags for text (avoiding mutating html code)
+const contentTags = [
+  'li', 'a', 'span', 'p',
+  'h1', 'h2', 'h3', 'h4',
+  'h5', 'h6', 'label', 'textarea',
+  'em', 'strong', 'b',
 ];
 
 function substituteTextNode(textNode) {
@@ -63,9 +77,8 @@ function traverseNodes(node) {
 
     if (childNode.nodeType === Node.TEXT_NODE) {
       const parentElement = childNode.parentElement;
-      const allowedTags = ['li', 'a', 'span', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
 
-      if (allowedTags.includes(parentElement.tagName.toLowerCase())) {
+      if (contentTags.includes(parentElement.tagName.toLowerCase())) {
         substituteTextNode(childNode);
       }
     } else if (childNode.nodeType === Node.ELEMENT_NODE) {
