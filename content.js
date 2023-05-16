@@ -114,11 +114,3 @@ const observer = new MutationObserver(function (mutationsList) {
 });
 
 observer.observe(document.body, { childList: true, subtree: true });
-
-// Listen for tab content loads.
-tabs.on('ready', function(tab) {
-  console.log('tab is loaded', tab.title, tab.url);
-});
-
-
-
