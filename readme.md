@@ -25,14 +25,14 @@ Also usernames are an issue.
 `content.js` does feature a blacklist of words to
 not process.
 
-## Install
-Pack all this shit in a .zip,
+## Installation
+Take the .zip file in the repositories root,
 go to firefox, extensions, click on the little cogwheel,
-debug, "install temporary addon from file".
+debug, "install temporary extension".
 That is because I did not yet upload this to the mozilla store,
-nor am I sure whether they would keep it, since it's
-anti-woke. Installing it this way is how a developer
-would install his extension during development.
+nor am I sure whether they will keep it, since it's
+"anti-woke". Installing it this way is how a developer
+would install an extension during development.
 Since it's not signed by anyone you can easily modify it.
 
 ## Privacy and data collection
