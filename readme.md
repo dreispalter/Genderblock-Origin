@@ -26,7 +26,7 @@ Also usernames are an issue.
 not process.
 
 ## Installation
-Take the .zip file from the releases tab,
+Take the .zip file in the repositories root,
 go to firefox, extensions, click on the little cogwheel,
 debug, "install temporary extension".
 That is because I did not yet upload this to the mozilla store,
