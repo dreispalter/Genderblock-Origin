@@ -2,6 +2,8 @@
 Makes an honest effort to ungender german websites
 that have been mangled into being overly politically correct.
 
+**This is a Firefox extension**
+
 ## Motivation
 Improve readability, thereby
 the inclusion of those who still
